@@ -14,8 +14,6 @@ import logging
 import unittest
 import sys
 
-import HTMLTestRunner
-
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
@@ -118,19 +116,10 @@ if __name__ == "__main__":
     print("main000000")
     logging.basicConfig(stream=sys.stderr)
 
-    with open('report.html', 'w') as report_file:
-        runner = HTMLTestRunner.HTMLTestRunner(
-            stream=report_file,
-            title='Test Report',
-            description='Regression Test Suite',
-            verbosity=3,
-            logger=logger
-        )
+    suite = unittest.TestLoader().loadTestsFromTestCase(BasicTestCase)
 
-        suite = unittest.TestLoader().loadTestsFromTestCase(BasicTestCase)
-
-        result = runner.run(suite)
-        print(result)
+    result = runner.run(suite)
+    print(result)
 
     st.set_page_config(
         page_title="aso title", page_icon=":chart_with_upwards_trend:"
