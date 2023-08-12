@@ -65,7 +65,7 @@ class MyAgent(ACTR):
 print("as800000000000000000")
 
 def main():
-    st.title("logging.info")
+    st.title(logger.info)
 
     with st.sidebar:
         st.header("Configuration")
