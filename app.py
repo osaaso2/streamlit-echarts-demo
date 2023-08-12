@@ -5,12 +5,12 @@ import streamlit as st
 
 from demo_echarts import ST_DEMOS
 from demo_pyecharts import ST_PY_DEMOS
-import python_actr
+#import python_actr
 from python_actr import *
 print("as900000000000000000")
-log=python_actr.log(html=True)
-log.aa=12
-log.aaa="aaa"
+#log=python_actr.log(html=True)
+#log.aa=12
+#log.aaa="aaa"
 class MyEnvironment(Model):
     pass
 
@@ -21,12 +21,12 @@ class MyAgent(ACTR):
     
     focus=Buffer()
     focus.set('sandwich bread')
-    log.as0=111
-    log.as2="aaa"
+    #log.as0=111
+    #log.as2="aaa"
     def bread_bottom(focus='sandwich bread'):     # if focus buffer has this chunk then....
         print("I have a piece of bread")           # print
-        log.info("as bread")
-        log.as1=2000
+        #log.info("as bread")
+        #log.as1=2000
         #focus.set('sandwich cheese')              # change chunk in focus buffer
 
 ##    def cheese(focus='sandwich cheese'):          # the rest of the productions are the same
