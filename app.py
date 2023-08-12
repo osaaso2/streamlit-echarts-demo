@@ -5,7 +5,7 @@ import streamlit as st
 
 from demo_echarts import ST_DEMOS
 from demo_pyecharts import ST_PY_DEMOS
-import python_actr
+from python_actr import *
 class MyEnvironment(Model):
     pass
 
