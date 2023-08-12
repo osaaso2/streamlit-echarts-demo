@@ -44,7 +44,7 @@ class MyAgent(ACTR):
     #log.as2="aaa"
     def bread_bottom(focus='sandwich bread'):     # if focus buffer has this chunk then....
         print("I have a piece of bread")           # print
-        logger.info="goal1"
+        logger.info='goal1'
         focus.set('sandwich cheese')              # change chunk in focus buffer
 
     def cheese(focus='sandwich cheese'):          # the rest of the productions are the same
@@ -66,9 +66,9 @@ class MyAgent(ACTR):
 print("as800000000000000000")
 
 def main():
-    logger.error='Test message 1!'
+    #logger.error='Test message 1!'
 
-    st.title(logger.error)
+    st.title(logger.info)
 
     with st.sidebar:
         st.header("Configuration")
