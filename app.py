@@ -9,7 +9,8 @@ import python_actr
 from python_actr import *
 print("as900000000000000000")
 log=python_actr.log(html=True)
-log.info("as inf")
+log.aa=12
+log.aaa="aaa"
 class MyEnvironment(Model):
     pass
 
