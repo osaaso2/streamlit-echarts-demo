@@ -115,11 +115,7 @@ def main():
 if __name__ == "__main__":
     print("main000000")
     logging.basicConfig(stream=sys.stderr)
-
-    suite = unittest.TestLoader().loadTestsFromTestCase(BasicTestCase)
-
-    result = runner.run(suite)
-    print(result)
+    logging.info="as  inf"
 
     st.set_page_config(
         page_title="aso title", page_icon=":chart_with_upwards_trend:"
