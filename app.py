@@ -20,12 +20,12 @@ import sys
 
 class BasicTestCase(unittest.TestCase):
     def test_one(self):
-        logger.info='Test message 1!'
+        #logger.info='Test message 1!'
         self.assertEqual(1, 1)
 
     def test_two(self):
         """Extended description"""
-        logger.error='Test message 1!'
+        #logger.error='Test message 1!'
         self.assertEqual(2, 2)
 
 
