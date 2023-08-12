@@ -87,13 +87,14 @@ if __name__ == "__main__":
     st.set_page_config(
         page_title="Streamlit ECharts Demo", page_icon=":chart_with_upwards_trend:"
     )
+
+    main()
     tim=MyAgent()                              # name the agent
     subway=MyEnvironment()                     # name the environment
     subway.agent=tim                           # put the agent in the environment
     ##ccm.log_everything(subway)                 # print out what happens in the environment
 
     subway.run()                               # run the environment
-    main()
     with st.sidebar:
         st.markdown("---")
         st.markdown(
