@@ -15,17 +15,17 @@ import unittest
 import sys
 
 
-logger.info('Test message 1!')
+logger.info='Test message 1!'
 
 
 class BasicTestCase(unittest.TestCase):
     def test_one(self):
-        logger.info('Test message 1!')
+        logger.info='Test message 1!'
         self.assertEqual(1, 1)
 
     def test_two(self):
         """Extended description"""
-        logger.error('Test message 1!')
+        logger.error='Test message 1!'
         self.assertEqual(2, 2)
 
 
@@ -65,7 +65,7 @@ class MyAgent(ACTR):
 print("as800000000000000000")
 
 def main():
-    logger.error('Test message 1!')
+    logger.error='Test message 1!'
 
     st.title(logger.error)
 
@@ -116,8 +116,7 @@ def main():
 
 if __name__ == "__main__":
     print("main000000")
-    logging.basicConfig(stream=sys.stderr)
-    logging.info="as  inf"
+    logger.info="as  inf"
 
     st.set_page_config(
         page_title="aso title", page_icon=":chart_with_upwards_trend:"
