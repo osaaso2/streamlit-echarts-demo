@@ -2,15 +2,15 @@ import inspect
 import textwrap
 
 import streamlit as st
-
+import logging
 from demo_echarts import ST_DEMOS
 from demo_pyecharts import ST_PY_DEMOS
 import python_actr
 from python_actr import *
 print("as900000000000000000")
-logger=log(html=True)
-
-#import logging
+#logger=log(html=True)
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
 import unittest
 import sys
 
