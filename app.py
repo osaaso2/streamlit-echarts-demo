@@ -95,6 +95,7 @@ if __name__ == "__main__":
     ##ccm.log_everything(subway)                 # print out what happens in the environment
 
     subway.run()                               # run the environment
+    print("as100000000000000000")
     with st.sidebar:
         st.markdown("---")
         st.markdown(
