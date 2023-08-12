@@ -81,7 +81,6 @@ def main():
 
     demo()
     print("as700000000000000000")
-print("as600000000000000000")
 
     sourcelines, _ = inspect.getsourcelines(demo)
     with st.expander("Source Code"):
