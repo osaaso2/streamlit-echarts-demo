@@ -16,6 +16,7 @@ import sys
 
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
+logger.info('Test message 1!')
 
 
 class BasicTestCase(unittest.TestCase):
@@ -65,7 +66,10 @@ class MyAgent(ACTR):
 print("as800000000000000000")
 
 def main():
-    st.title(logger.info)
+    logger.error('Test message 1!')
+
+    st.title(logger.error)
+)
 
     with st.sidebar:
         st.header("Configuration")
