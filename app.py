@@ -63,7 +63,7 @@ def main():
             else list(ST_DEMOS.keys())
         )
         selected_page = st.selectbox(
-            label="Choose an example",
+            label=log.aaa(),
             options=page_options,
         )
         demo, url = (
@@ -98,7 +98,7 @@ if __name__ == "__main__":
     print("main000000")
 
     st.set_page_config(
-        page_title=log.aa, page_icon=":chart_with_upwards_trend:"
+        page_title="aso title", page_icon=":chart_with_upwards_trend:"
     )
     print("main2")
 
