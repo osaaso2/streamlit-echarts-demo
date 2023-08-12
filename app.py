@@ -66,7 +66,6 @@ class MyAgent(ACTR):
 print("as800000000000000000")
 
 def main():
-    test_two()
     logger.error('Test message 1!')
 
     st.title(logger.error)
@@ -120,7 +119,6 @@ if __name__ == "__main__":
     print("main000000")
     logging.basicConfig(stream=sys.stderr)
     logging.info="as  inf"
-    test_one()
 
     st.set_page_config(
         page_title="aso title", page_icon=":chart_with_upwards_trend:"
