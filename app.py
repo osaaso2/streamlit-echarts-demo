@@ -47,7 +47,7 @@ class MyAgent(ACTR):
 print("as800000000000000000")
 
 def main():
-    st.title("Streamlit ECharts Demo")
+    st.title(log.aa)
 
     with st.sidebar:
         st.header("Configuration")
@@ -63,7 +63,7 @@ def main():
             else list(ST_DEMOS.keys())
         )
         selected_page = st.selectbox(
-            label=log.aaa(),
+            label=log.aaa,
             options=page_options,
         )
         demo, url = (
