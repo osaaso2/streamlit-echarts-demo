@@ -15,7 +15,7 @@ import unittest
 import sys
 
 
-logger.info='Test message 1!'
+#logger.info='Test message 1!'
 
 
 class BasicTestCase(unittest.TestCase):
@@ -49,6 +49,7 @@ class MyAgent(ACTR):
 
     def cheese(focus='sandwich cheese'):          # the rest of the productions are the same
         print ("ended")    # but carry out different actions
+        logger.info='goal2'
         focus.set('stop')
     def stop_production(focus='stop'):
         self.stop()                        # stop the agent
@@ -68,7 +69,7 @@ print("as800000000000000000")
 def main():
     #logger.error='Test message 1!'
 
-    st.title(logger.info)
+    st.title(logger.error)
 
     with st.sidebar:
         st.header("Configuration")
