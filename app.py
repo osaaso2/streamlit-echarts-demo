@@ -9,6 +9,7 @@ import python_actr
 from python_actr import *
 print("as900000000000000000")
 log=python_actr.log(html=True)
+log.Info("as inf")
 class MyEnvironment(Model):
     pass
 
@@ -23,6 +24,7 @@ class MyAgent(ACTR):
     log.as2="aaa"
     def bread_bottom(focus='sandwich bread'):     # if focus buffer has this chunk then....
         print("I have a piece of bread")           # print
+        log.Info("as bread")
         log.as1=2000
         #focus.set('sandwich cheese')              # change chunk in focus buffer
 
