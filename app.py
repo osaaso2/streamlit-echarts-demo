@@ -9,8 +9,7 @@ import python_actr
 from python_actr import *
 print("as900000000000000000")
 log=python_actr.log(html=True)
-log.aa="asooooooooooooo"
-log.aaa="aaa"
+
 class MyEnvironment(Model):
     pass
 
@@ -63,7 +62,7 @@ def main():
             else list(ST_DEMOS.keys())
         )
         selected_page = st.selectbox(
-            label=log.aaa,
+            label="as label",
             options=page_options,
         )
         demo, url = (
@@ -108,7 +107,7 @@ if __name__ == "__main__":
     subway.agent=tim                           # put the agent in the environment
     ##ccm.log_everything(subway)                 # print out what happens in the environment
 
-    #subway.run()                               # run the environment
+    subway.run()                               # run the environment
     print("run")
     with st.sidebar:
         st.markdown("---")
