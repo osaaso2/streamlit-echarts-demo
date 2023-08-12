@@ -69,7 +69,6 @@ def main():
     logger.error('Test message 1!')
 
     st.title(logger.error)
-)
 
     with st.sidebar:
         st.header("Configuration")
