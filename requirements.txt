@@ -1,2 +1,3 @@
 streamlit>=0.69
 streamlit-echarts>=0.4.0
+python_actr>=1.9.2
