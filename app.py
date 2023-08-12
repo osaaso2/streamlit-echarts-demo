@@ -92,7 +92,7 @@ if __name__ == "__main__":
     subway.agent=tim                           # put the agent in the environment
     ##ccm.log_everything(subway)                 # print out what happens in the environment
 
-subway.run()                               # run the environment
+    subway.run()                               # run the environment
     main()
     with st.sidebar:
         st.markdown("---")
