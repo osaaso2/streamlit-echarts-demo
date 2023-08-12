@@ -6,6 +6,8 @@ import streamlit as st
 from demo_echarts import ST_DEMOS
 from demo_pyecharts import ST_PY_DEMOS
 from python_actr import *
+print("as900000000000000000")
+
 class MyEnvironment(Model):
     pass
 
@@ -36,6 +38,8 @@ class MyAgent(ACTR):
 ##
 ##    def stop_production(focus='stop'):
 ##        self.stop()                        # stop the agent
+print("as800000000000000000")
+
 def main():
     st.title("Streamlit ECharts Demo")
 
@@ -76,6 +80,8 @@ def main():
             )
 
     demo()
+    print("as700000000000000000")
+print("as600000000000000000")
 
     sourcelines, _ = inspect.getsourcelines(demo)
     with st.expander("Source Code"):
@@ -84,9 +90,12 @@ def main():
 
 
 if __name__ == "__main__":
+    print("main000000")
+
     st.set_page_config(
         page_title="Streamlit ECharts Demo", page_icon=":chart_with_upwards_trend:"
     )
+    print("main2")
 
     main()
     tim=MyAgent()                              # name the agent
@@ -95,7 +104,7 @@ if __name__ == "__main__":
     ##ccm.log_everything(subway)                 # print out what happens in the environment
 
     subway.run()                               # run the environment
-    print("as100000000000000000")
+    print("run")
     with st.sidebar:
         st.markdown("---")
         st.markdown(
@@ -106,3 +115,4 @@ if __name__ == "__main__":
             '<div style="margin-top: 0.75em;"><a href="https://www.buymeacoffee.com/andfanilo" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a></div>',
             unsafe_allow_html=True,
         )
+print("end")
