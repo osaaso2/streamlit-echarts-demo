@@ -8,9 +8,9 @@ from demo_pyecharts import ST_PY_DEMOS
 #import python_actr
 from python_actr import *
 print("as900000000000000000")
-#log=python_actr.log(html=True)
-#log.aa=12
-#log.aaa="aaa"
+log=log(html=True)
+log.aa="asooooooooooooo"
+log.aaa="aaa"
 class MyEnvironment(Model):
     pass
 
@@ -98,7 +98,7 @@ if __name__ == "__main__":
     print("main000000")
 
     st.set_page_config(
-        page_title="Streamlit ECharts Demo", page_icon=":chart_with_upwards_trend:"
+        page_title=log.aa, page_icon=":chart_with_upwards_trend:"
     )
     print("main2")
 
@@ -108,7 +108,7 @@ if __name__ == "__main__":
     subway.agent=tim                           # put the agent in the environment
     ##ccm.log_everything(subway)                 # print out what happens in the environment
 
-    subway.run()                               # run the environment
+    #subway.run()                               # run the environment
     print("run")
     with st.sidebar:
         st.markdown("---")
