@@ -15,7 +15,7 @@ import unittest
 import sys
 
 
-#logger.info='Test message 1!'
+logger.error='Test message 1!'
 
 
 class BasicTestCase(unittest.TestCase):
