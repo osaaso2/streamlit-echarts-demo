@@ -5,8 +5,37 @@ import streamlit as st
 
 from demo_echarts import ST_DEMOS
 from demo_pyecharts import ST_PY_DEMOS
+import python_actr
+class MyEnvironment(Model):
+    pass
 
+#####
+# create an act-r agent
 
+class MyAgent(ACTR):
+    
+    focus=Buffer()
+    focus.set('sandwich bread')
+
+    def bread_bottom(focus='sandwich bread'):     # if focus buffer has this chunk then....
+        print("I have a piece of bread")           # print
+        #focus.set('sandwich cheese')              # change chunk in focus buffer
+
+##    def cheese(focus='sandwich cheese'):          # the rest of the productions are the same
+##        print "I have put cheese on the bread"    # but carry out different actions
+##        focus.set('sandwich ham')
+##
+##    def ham(focus='sandwich ham'):
+##        print "I have put  ham on the cheese"
+##        focus.set('sandwich bread_top')
+##
+##    def bread_top(focus='sandwich bread_top'):
+##        print "I have put bread on the ham"
+##        print "I have made a ham and cheese sandwich"
+##        focus.set('stop')   
+##
+##    def stop_production(focus='stop'):
+##        self.stop()                        # stop the agent
 def main():
     st.title("Streamlit ECharts Demo")
 
@@ -58,6 +87,12 @@ if __name__ == "__main__":
     st.set_page_config(
         page_title="Streamlit ECharts Demo", page_icon=":chart_with_upwards_trend:"
     )
+    tim=MyAgent()                              # name the agent
+    subway=MyEnvironment()                     # name the environment
+    subway.agent=tim                           # put the agent in the environment
+    ##ccm.log_everything(subway)                 # print out what happens in the environment
+
+subway.run()                               # run the environment
     main()
     with st.sidebar:
         st.markdown("---")
