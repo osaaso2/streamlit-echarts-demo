@@ -8,7 +8,7 @@ from demo_pyecharts import ST_PY_DEMOS
 import python_actr
 from python_actr import *
 print("as900000000000000000")
-log=python_actr.log(html=True)
+log=log(html=True)
 
 class MyEnvironment(Model):
     pass
@@ -29,7 +29,7 @@ class MyAgent(ACTR):
     def cheese(focus='sandwich cheese'):          # the rest of the productions are the same
         print ("ended")    # but carry out different actions
         focus.set('stop')
-      def stop_production(focus='stop'):
+    def stop_production(focus='stop'):
         self.stop()                        # stop the agent
 ##
 ##    def ham(focus='sandwich ham'):
