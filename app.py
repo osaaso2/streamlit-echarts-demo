@@ -5,7 +5,6 @@ import streamlit as st
 import logging
 from demo_echarts import ST_DEMOS
 from demo_pyecharts import ST_PY_DEMOS
-import python_actr
 from python_actr import *
 print("as900000000000000000")
 #logger=log(html=True)
