@@ -8,7 +8,7 @@ from demo_pyecharts import ST_PY_DEMOS
 import python_actr
 from python_actr import *
 print("as900000000000000000")
-#log=log(html=True)
+log=log(html=True)
 
 import logging
 import unittest
