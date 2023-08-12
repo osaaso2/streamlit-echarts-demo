@@ -7,7 +7,7 @@ from demo_echarts import ST_DEMOS
 from demo_pyecharts import ST_PY_DEMOS
 from python_actr import *
 print("as900000000000000000")
-
+log=log(html=TTrue)
 class MyEnvironment(Model):
     pass
 
@@ -18,9 +18,11 @@ class MyAgent(ACTR):
     
     focus=Buffer()
     focus.set('sandwich bread')
-
+    log.as0=111
+    log.as2="aaa"
     def bread_bottom(focus='sandwich bread'):     # if focus buffer has this chunk then....
         print("I have a piece of bread")           # print
+        log.as1=2000
         #focus.set('sandwich cheese')              # change chunk in focus buffer
 
 ##    def cheese(focus='sandwich cheese'):          # the rest of the productions are the same
