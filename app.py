@@ -2,19 +2,19 @@ import inspect
 import textwrap
 
 import streamlit as st
-import logging
+#import logging
 from demo_echarts import ST_DEMOS
 from demo_pyecharts import ST_PY_DEMOS
 from python_actr import *
 print("as900000000000000000")
 #logger=log(html=True)
-logger = logging.getLogger()
-logger.setLevel(logging.DEBUG)
+#logger = logging.getLogger()
+#logger.setLevel(logging.DEBUG)
 import unittest
 import sys
 
 
-logger.error='Test message 1!'
+#logger.error='Test message 1!'
 
 
 class BasicTestCase(unittest.TestCase):
@@ -43,12 +43,12 @@ class MyAgent(ACTR):
     #log.as2="aaa"
     def bread_bottom(focus='sandwich bread'):     # if focus buffer has this chunk then....
         print("I have a piece of bread")           # print
-        logger.error='goal1'
+        log.error1='goal1'
         focus.set('sandwich cheese')              # change chunk in focus buffer
 
     def cheese(focus='sandwich cheese'):          # the rest of the productions are the same
         print ("ended")    # but carry out different actions
-        logger.error='goal2'
+        log.error2='goal2'
         focus.set('stop')
     def stop_production(focus='stop'):
         self.stop()                        # stop the agent
@@ -68,7 +68,7 @@ print("as800000000000000000")
 def main():
     #logger.error='Test message 1!'
 
-    st.title(logger.error)
+    st.title(log.error1)
 
     with st.sidebar:
         st.header("Configuration")
@@ -128,9 +128,9 @@ if __name__ == "__main__":
     tim=MyAgent()                              # name the agent
     subway=MyEnvironment()                     # name the environment
     subway.agent=tim                           # put the agent in the environment
-    ##ccm.log_everything(subway)                 # print out what happens in the environment
+    log_everything(subway)                 # print out what happens in the environment
 
-    subway.run(3)                               # run the environment
+    subway.run(1)                               # run the environment
     print("run")
     with st.sidebar:
         st.markdown("---")
