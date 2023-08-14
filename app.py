@@ -12,8 +12,10 @@ print("as900000000000000000")
 #logger.setLevel(logging.DEBUG)
 #import unittest
 import sys
+log.as1="000"
 
 from python_actr import ex1
+
 tim=MyAgent()                              # name the agent
 subway=MyEnvironment()                     # name the environment
 subway.agent=tim                           # put the agent in the environment
