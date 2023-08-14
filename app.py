@@ -34,7 +34,7 @@ class MyAgent(ACTR):
 
     async def bread_bottom(focus='sandwich bread'):     # if focus buffer has this chunk then....
         print("I have a piece of bread")           # print
-        log.action1=log.action1+5
+        log.action1=5
         focus.set('stop')              # change chunk in focus buffer
     async def cheese(focus='stop'):          # the rest of the productions are the same
         print ("I have put cheese on the bread")    # but carry out different actions
