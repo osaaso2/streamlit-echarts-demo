@@ -101,18 +101,15 @@ def main():
     with st.expander("Source Code"):
         st.code(textwrap.dedent("".join(sourcelines[1:])))
 
-        st.markdown(f"Credit: {url}{as111}")
+        st.markdown(f"Credit: {url}")
 
 
 if __name__ == "__main__":
-    print("main000000")
-    #logger.info="as  inf"
 
     st.set_page_config(
         page_title="aso title", page_icon=":chart_with_upwards_trend:"
     )
-    print("main2")
-
+=
     main()
 
     with st.sidebar:
