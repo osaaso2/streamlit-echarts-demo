@@ -70,7 +70,7 @@ def main():
         st.header("Configuration")
         api_options = ("echarts", "pyecharts")
         selected_api = st.selectbox(
-            label=circuit.draw() #str(log.action1),
+            label=circuit.draw(),
             options=api_options,
         )
 
