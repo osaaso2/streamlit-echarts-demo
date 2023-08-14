@@ -36,11 +36,12 @@ class ForcedChoiceEnvironment(Model):
 #  tutorials on creating models
 class SimpleModel(Model):
   def start(self):
+    log.action1="as3"   # here we record what letter was pressed
+
     while True:               # repeat the following forever
       print("as10000")
       self.parent.press('A')
       yield 1                 # wait for 1 second before continuing
-      log.action1="as3"   # here we record what letter was pressed
 
 
 # Now that the agent and the environment have been defined, we can create
