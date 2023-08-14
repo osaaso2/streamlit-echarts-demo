@@ -23,7 +23,7 @@ circuit = QuantumCircuit(2)
 circuit.rx(x, 1)
 circuit.cx(1, 0)
 circuit.ry(-2*y, 0)
-circuit.draw("mpl")
+#circuit.draw("mpl")
 
 log.action1=1
 
@@ -70,7 +70,7 @@ def main():
         st.header("Configuration")
         api_options = ("echarts", "pyecharts")
         selected_api = st.selectbox(
-            label=str(log.action1),
+            label=circuit.draw() #str(log.action1),
             options=api_options,
         )
 
