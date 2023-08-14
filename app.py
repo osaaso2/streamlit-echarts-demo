@@ -19,15 +19,13 @@ class MyEnvironment(Model):
     pass
 #####
 # create an act-r agent
-log.action2=20
 log.action1=10
-as2=10
 
 class ForcedChoiceEnvironment(Model):
   # this is an action that can be taken by the agent in the environment
   async def press(self,letter):     # 'self' refers to the thing we are currently
                               #  of defining.  In this case, the environment
-    log.action1+=log.action1    # here we record what letter was pressed
+    log.action1=13   # here we record what letter was pressed
 
     if letter=='A':
       self.reward=1      # if it was 'A', we set the reward to one.  
@@ -43,7 +41,7 @@ class SimpleModel(Model):
       print("as10000")
       self.parent.press('A')
       yield 1                 # wait for 1 second before continuing
-      log.action2+=log.action2    # here we record what letter was pressed
+      log.action2=23   # here we record what letter was pressed
 
 
 # Now that the agent and the environment have been defined, we can create
