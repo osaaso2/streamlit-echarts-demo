@@ -13,11 +13,11 @@ print("as900000000000000000")
 #import unittest
 import sys
 log.as1="000"
-from python_actr import ex1
+#from python_actr import ex1
 #from  import MyEnvironment, MyAgent
 
-tim=MyAgent()                              # name the agent
-subway=MyEnvironment()                     # name the environment
+tim=ex1.MyAgent()                              # name the agent
+subway=ex1.MyEnvironment()                     # name the environment
 subway.agent=tim                           # put the agent in the environment
 log_everything(subway)                 # print out what happens in the environment
 
