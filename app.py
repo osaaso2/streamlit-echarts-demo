@@ -13,7 +13,7 @@ print("as900000000000000000")
 #import unittest
 #import sys
 
-log.as1='as1'
+log.action1=1
 
 class MyEnvironment(Model):
     pass
@@ -70,7 +70,7 @@ def main():
             else list(ST_DEMOS.keys())
         )
         selected_page = st.selectbox(
-            label=log.as1,
+            label=str(log.action1),
             options=page_options,
         )
         demo, url = (
