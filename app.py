@@ -10,8 +10,8 @@ print("as900000000000000000")
 #logger=log(html=True)
 #logger = logging.getLogger()
 #logger.setLevel(logging.DEBUG)
-#import unittest
-#import sys
+import unittest
+import sys
 
 log.action1="1"
 
