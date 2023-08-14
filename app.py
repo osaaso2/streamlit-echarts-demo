@@ -61,7 +61,7 @@ print("as800000000000000000")
 
 def main():
     #logger.error='Test message 1!'
-    program = 'a = 5\nb=10\nprint("Sum =", a+b)'
+    program = ' = 5\nb=10\nprint("Sum =", a+b)'
     exec(program)
     as0=str(a)
     #python_actr/tests/test_actr_compile.py
@@ -81,7 +81,7 @@ def main():
             else list(ST_DEMOS.keys())
         )
         selected_page = st.selectbox(
-            label=as0,
+            label="as0",
             options=page_options,
         )
         demo, url = (
