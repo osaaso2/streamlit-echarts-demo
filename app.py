@@ -33,11 +33,11 @@ class MyAgent(ACTR):
 
     def bread_bottom(focus='sandwich bread'):     # if focus buffer has this chunk then....
         print("I have a piece of bread")           # print
-        #focus.set('sandwich cheese')              # change chunk in focus buffer
         log.action1=2
-##    def cheese(focus='sandwich cheese'):          # the rest of the productions are the same
-##        print "I have put cheese on the bread"    # but carry out different actions
-##        focus.set('sandwich ham')
+        focus.set('stop')              # change chunk in focus buffer
+    def cheese(focus='stop'):          # the rest of the productions are the same
+        print ("I have put cheese on the bread")    # but carry out different actions
+        self.stop()
 ##
 ##    def ham(focus='sandwich ham'):
 ##        print "I have put  ham on the cheese"
