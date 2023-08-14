@@ -1,7 +1,8 @@
 import inspect
 import textwrap
+
 import streamlit as st
-#import logging
+
 from demo_echarts import ST_DEMOS
 from demo_pyecharts import ST_PY_DEMOS
 from python_actr import *
@@ -10,29 +11,33 @@ print("as900000000000000000")
 #logger = logging.getLogger()
 #logger.setLevel(logging.DEBUG)
 #import unittest
-import sys
-#logger.error='Test message 1!'
+#import sys
+
+log.action1=1
+
+#####
+# Python ACT-R requires an environment
+# but in this case we will not be using anything in the environment
+# so we 'pass' on putting things in there
+
 class MyEnvironment(Model):
     pass
-log.as1="as1"
+
 #####
 # create an act-r agent
+
 class MyAgent(ACTR):
     
     focus=Buffer()
     focus.set('sandwich bread')
-    log.as1="aso111"
-    #log.as2="aaa"
-    def bread_bottom(focus='sandwich bread'):     # if focus buffer has this chunk then....
+
+    async def bread_bottom(focus='sandwich bread'):     # if focus buffer has this chunk then....
         print("I have a piece of bread")           # print
-        log.as1='goal1'
-        focus.set('sandwich cheese')              # change chunk in focus buffer
-    def cheese(focus='sandwich cheese'):          # the rest of the productions are the same
-        print ("ended")    # but carry out different actions
-        log.as2='goal2'
-        focus.set('stop')
-    def stop_production(focus='stop'):
-        self.stop()                        # stop the agent
+        log.action1=2
+        focus.set('stop')              # change chunk in focus buffer
+    async def cheese(focus='stop'):          # the rest of the productions are the same
+        print ("I have put cheese on the bread")    # but carry out different actions
+        self.stop()
 ##
 ##    def ham(focus='sandwich ham'):
 ##        print "I have put  ham on the cheese"
@@ -43,23 +48,19 @@ class MyAgent(ACTR):
 ##        print "I have made a ham and cheese sandwich"
 ##        focus.set('stop')   
 ##
+##    def stop_production(focus='stop'):
+##        self.stop()                        # stop the agent
+
 tim=MyAgent()                              # name the agent
 subway=MyEnvironment()                     # name the environment
 subway.agent=tim                           # put the agent in the environment
 log_everything(subway)                 # print out what happens in the environment
-subway.run(1)                               # run the environment
-print("run")
-print("as800000000000000000")
+
+subway.run(3)   
 
 def main():
-    #logger.error='Test message 1!'
-    program = 'a = 5\nb=10\nprint("Sum =", a+b)'
-    program = ' = 5\nb=10\nprint("Sum =", a+b)'
-    exec(program)
-    as0=str(a)
-    #python_actr/tests/test_actr_compile.py
-    #st.title(log.error1)
-    
+    st.title("Streamlit ECharts Demo")
+
     with st.sidebar:
         st.header("Configuration")
         api_options = ("echarts", "pyecharts")
@@ -67,14 +68,14 @@ def main():
             label="Choose your preferred API:",
             options=api_options,
         )
+
         page_options = (
             list(ST_PY_DEMOS.keys())
             if selected_api == "pyecharts"
             else list(ST_DEMOS.keys())
         )
         selected_page = st.selectbox(
-            label=as0,
-            label="as0",
+            label="Choose an example",
             options=page_options,
         )
         demo, url = (
@@ -82,6 +83,7 @@ def main():
             if selected_api == "echarts"
             else ST_PY_DEMOS[selected_page]
         )
+
         if selected_api == "echarts":
             st.caption(
                 """ECharts demos are extracted from https://echarts.apache.org/examples/en/index.html, 
@@ -94,19 +96,19 @@ def main():
             by copying the pyecharts object into st_pyecharts. 
             Pyecharts is still using ECharts 4 underneath, which is why the theming between st_echarts and st_pyecharts is different."""
             )
+
     demo()
-    print("as700000000000000000")
+
     sourcelines, _ = inspect.getsourcelines(demo)
     with st.expander("Source Code"):
         st.code(textwrap.dedent("".join(sourcelines[1:])))
     st.markdown(f"Credit: {url}")
+
+
 if __name__ == "__main__":
-    print("main000000")
-    #logger.info="as  inf"
     st.set_page_config(
-        page_title="aso title", page_icon=":chart_with_upwards_trend:"
+        page_title="Streamlit ECharts Demo", page_icon=":chart_with_upwards_trend:"
     )
-    print("main2")
     main()
     with st.sidebar:
         st.markdown("---")
@@ -118,4 +120,3 @@ if __name__ == "__main__":
             '<div style="margin-top: 0.75em;"><a href="https://www.buymeacoffee.com/andfanilo" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a></div>',
             unsafe_allow_html=True,
         )
-print("end")
