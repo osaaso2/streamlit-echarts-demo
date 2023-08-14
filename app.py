@@ -13,10 +13,10 @@ print("as900000000000000000")
 #import unittest
 import sys
 
+log.as1="as1"
 
 class MyEnvironment(Model):
     pass
-log.as1="as1"
 #####
 # create an act-r agent
 
@@ -24,8 +24,7 @@ class MyAgent(ACTR):
     
     focus=Buffer()
     focus.set('sandwich bread')
-    log.as1="aso111"
-    #log.as2="aaa"
+
     def bread_bottom(focus='sandwich bread'):     # if focus buffer has this chunk then....
         print("I have a piece of bread")           # print
         log.as1='goal1'
@@ -33,7 +32,6 @@ class MyAgent(ACTR):
 
     def cheese(focus='sandwich cheese'):          # the rest of the productions are the same
         print ("ended")    # but carry out different actions
-        log.as2='goal2'
         focus.set('stop')
     def stop_production(focus='stop'):
         self.stop()                        # stop the agent
@@ -56,18 +54,10 @@ subway.agent=tim                           # put the agent in the environment
 log_everything(subway)                 # print out what happens in the environment
 
 subway.run(1)                               # run the environment
-print("run")
-print("as800000000000000000")
-as111="112"
 
-log.as1="as1log"
+
 def main():
-    #logger.error='Test message 1!'
-    #program = 'a=5\nb=10\nprint("Sum =", a+b)'
-    #exec(program)
-    #python_actr/tests/test_actr_compile.py
-    #st.title(log.error1)
-    
+
     with st.sidebar:
         st.header("Configuration")
         api_options = ("echarts", "pyecharts")
