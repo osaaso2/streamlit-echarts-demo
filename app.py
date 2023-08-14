@@ -62,7 +62,7 @@ def main():
 
     sourcelines, _ = inspect.getsourcelines(demo)
     with st.expander("Source Code"):
-        st.code(textwrap.dedent(join(sourcelines[1:])))
+        st.code(textwrap.dedent("".join(sourcelines[1:])))
 
         class MyEnvironment(Model):
             pass
