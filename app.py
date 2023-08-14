@@ -13,7 +13,7 @@ print("as900000000000000000")
 #import unittest
 import sys
 log.as1="000"
-
+from python_actr import ex1
 #from  import MyEnvironment, MyAgent
 
 tim=MyAgent()                              # name the agent
