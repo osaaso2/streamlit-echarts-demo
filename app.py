@@ -62,7 +62,6 @@ def main():
 
     sourcelines, _ = inspect.getsourcelines(demo)
     with st.expander("Source Code"):
-        st.code(textwrap.dedent("".join(sourcelines[1:])))
         
         class MyEnvironment(Model):
             pass
@@ -109,6 +108,7 @@ def main():
         print("run")
         print("as800000000000000000")
         as0=12
+    st.code(textwrap.dedent("as111".join(sourcelines[1:])))
 
     st.markdown(f"Credit: {url}")
 
