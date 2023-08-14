@@ -15,43 +15,43 @@ print("as900000000000000000")
 
 log.action1=1
 
-class MyEnvironment(Model):
-    pass
-#####
-# create an act-r agent
-
-class ForcedChoiceEnvironment(Model):
-  # this is an action that can be taken by the agent in the environment
-  async def press(self,letter):     # 'self' refers to the thing we are currently
-                              #  of defining.  In this case, the environment
-    log.action1=13   # here we record what letter was pressed
-
-    if letter=='A':
-      self.reward=1      # if it was 'A', we set the reward to one.  
-    else:  
-      self.reward=0      # otherwise, set it to zero.
-
-
-# This defines a simple agent.  We will examine this in more detail in the
-#  tutorials on creating models
-class SimpleModel(Model):
-  async def start(self):
-    while True:               # repeat the following forever
-      print("as10000")
-      self.parent.press('A')
-      yield 1                 # wait for 1 second before continuing
-      log.action2=23   # here we record what letter was pressed
-
-
-# Now that the agent and the environment have been defined, we can create
-#  one of each, connect them together, and run the simulation.      
-env=ForcedChoiceEnvironment()   # create the environment
-model=SimpleModel()             # create the agent
-env.agent=model                 # put the agent in the environment
-log_everything(env)
-env.run()  
-
 def main():
+    class MyEnvironment(Model):
+    pass
+    #####
+    # create an act-r agent
+    
+    class ForcedChoiceEnvironment(Model):
+      # this is an action that can be taken by the agent in the environment
+      async def press(self,letter):     # 'self' refers to the thing we are currently
+                                  #  of defining.  In this case, the environment
+        log.action1=13   # here we record what letter was pressed
+    
+        if letter=='A':
+          self.reward=1      # if it was 'A', we set the reward to one.  
+        else:  
+          self.reward=0      # otherwise, set it to zero.
+    
+    
+    # This defines a simple agent.  We will examine this in more detail in the
+    #  tutorials on creating models
+    class SimpleModel(Model):
+      async def start(self):
+        while True:               # repeat the following forever
+          print("as10000")
+          self.parent.press('A')
+          yield 1                 # wait for 1 second before continuing
+          log.action2=23   # here we record what letter was pressed
+    
+    
+    # Now that the agent and the environment have been defined, we can create
+    #  one of each, connect them together, and run the simulation.      
+    env=ForcedChoiceEnvironment()   # create the environment
+    model=SimpleModel()             # create the agent
+    env.agent=model                 # put the agent in the environment
+    log_everything(env)
+    env.run()  
+    
 
     with st.sidebar:
         st.header("Configuration")
