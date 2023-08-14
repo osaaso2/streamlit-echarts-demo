@@ -13,7 +13,7 @@ print("as900000000000000000")
 import unittest
 import sys
 
-log.action1="1"
+log.action1=1
 
 #####
 # Python ACT-R requires an environment
@@ -21,7 +21,7 @@ log.action1="1"
 # so we 'pass' on putting things in there
 
 class MyEnvironment(Model):
-    log.action1="4"
+    log.action1=4
     pass
 
 #####
@@ -34,7 +34,7 @@ class MyAgent(ACTR):
 
     async def bread_bottom(focus='sandwich bread'):     # if focus buffer has this chunk then....
         print("I have a piece of bread")           # print
-        log.action1="2"
+        log.action1=log.action1+5
         focus.set('stop')              # change chunk in focus buffer
     async def cheese(focus='stop'):          # the rest of the productions are the same
         print ("I have put cheese on the bread")    # but carry out different actions
@@ -66,7 +66,7 @@ def main():
         st.header("Configuration")
         api_options = ("echarts", "pyecharts")
         selected_api = st.selectbox(
-            label=log.action1,
+            label=str(log.action1),
             options=api_options,
         )
 
