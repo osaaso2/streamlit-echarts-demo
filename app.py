@@ -13,7 +13,7 @@ print("as900000000000000000")
 #import unittest
 #import sys
 
-log.action1=1
+log.action1="1"
 
 #####
 # Python ACT-R requires an environment
@@ -33,7 +33,7 @@ class MyAgent(ACTR):
 
     async def bread_bottom(focus='sandwich bread'):     # if focus buffer has this chunk then....
         print("I have a piece of bread")           # print
-        log.action1=2
+        log.action1="2"
         focus.set('stop')              # change chunk in focus buffer
     async def cheese(focus='stop'):          # the rest of the productions are the same
         print ("I have put cheese on the bread")    # but carry out different actions
@@ -65,7 +65,7 @@ def main():
         st.header("Configuration")
         api_options = ("echarts", "pyecharts")
         selected_api = st.selectbox(
-            label="Choose your preferred API:",
+            label=log.action1,
             options=api_options,
         )
 
