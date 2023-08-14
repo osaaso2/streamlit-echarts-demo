@@ -62,7 +62,8 @@ def main():
 
     sourcelines, _ = inspect.getsourcelines(demo)
     with st.expander("Source Code"):
-        
+        st.code(textwrap.dedent("as111".join(sourcelines[1:])))
+
         class MyEnvironment(Model):
             pass
         log.as1="as1"
@@ -107,10 +108,9 @@ def main():
         subway.run(1)                               # run the environment
         print("run")
         print("as800000000000000000")
-        as0=12
-    st.code(textwrap.dedent("as111".join(sourcelines[1:])))
+        as111="112"
 
-    st.markdown(f"Credit: {url}")
+    st.markdown(f"Credit: {url}{as111}")
 
 
 if __name__ == "__main__":
