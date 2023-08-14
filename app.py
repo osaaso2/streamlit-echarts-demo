@@ -17,7 +17,7 @@ log.action1=1
 
 def main():
     class MyEnvironment(Model):
-    pass
+        pass
     #####
     # create an act-r agent
     
