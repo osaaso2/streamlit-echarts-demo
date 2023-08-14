@@ -16,8 +16,8 @@ log.as1="000"
 #from python_actr import ex1
 #from  import MyEnvironment, MyAgent
 
-tim=ex1.MyAgent()                              # name the agent
-subway=ex1.MyEnvironment()                     # name the environment
+tim=MyAgent()                              # name the agent
+subway=MyEnvironment()                     # name the environment
 subway.agent=tim                           # put the agent in the environment
 log_everything(subway)                 # print out what happens in the environment
 
