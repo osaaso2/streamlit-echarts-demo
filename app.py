@@ -61,9 +61,8 @@ print("as800000000000000000")
 as0=12
 def main():
     #logger.error='Test message 1!'
-    program = 'a=5\nb=10\nprint("Sum =", a+b)'
-    exec(program)
-    as0=a
+    #program = 'a=5\nb=10\nprint("Sum =", a+b)'
+    #exec(program)
     #python_actr/tests/test_actr_compile.py
     #st.title(log.error1)
     
@@ -81,7 +80,7 @@ def main():
             else list(ST_DEMOS.keys())
         )
         selected_page = st.selectbox(
-            label=str(as0),
+            label="asolab",
             options=page_options,
         )
         demo, url = (
