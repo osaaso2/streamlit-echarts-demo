@@ -13,6 +13,7 @@ print("as900000000000000000")
 #import unittest
 import sys
 
+from python_actr import ex1
 tim=MyAgent()                              # name the agent
 subway=MyEnvironment()                     # name the environment
 subway.agent=tim                           # put the agent in the environment
