@@ -1,6 +1,6 @@
 
 #logger.error='Test message 1!'
-import log
+from . import log
 log.as1="as1log"
 
 class MyEnvironment(Model):
