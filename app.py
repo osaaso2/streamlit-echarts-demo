@@ -25,7 +25,7 @@ class ForcedChoiceEnvironment(Model):
                               #  of defining.  In this case, the environment
 
     if letter=='A':
-      log.action1+=1    # here we record what letter was pressed
+      log.action1+=10    # here we record what letter was pressed
 
       self.reward=1      # if it was 'A', we set the reward to one.  
     else:
