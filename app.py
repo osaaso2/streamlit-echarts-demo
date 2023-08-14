@@ -13,7 +13,7 @@ print("as900000000000000000")
 #import unittest
 import sys
 
-log.as1="as1"
+log.as1='as1'
 
 class MyEnvironment(Model):
     pass
