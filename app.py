@@ -15,49 +15,41 @@ import sys
 
 log.action1=1
 
-#####
-# Python ACT-R requires an environment
-# but in this case we will not be using anything in the environment
-# so we 'pass' on putting things in there
+#log=log()
+log.action1=10
+as2=10
 
-class MyEnvironment(Model):
-    log.action1=log.action1+100
-    #pass
+class ForcedChoiceEnvironment(Model):
+  # this is an action that can be taken by the agent in the environment
+  def press(self,letter):     # 'self' refers to the thing we are currently
+                              #  of defining.  In this case, the environment
 
-#####
-# create an act-r agent
+    if letter=='A':
+      log.action1+=1    # here we record what letter was pressed
 
-class MyAgent(ACTR):
-    
-    focus=Buffer()
-    focus.set('sandwich bread')
+      self.reward=1      # if it was 'A', we set the reward to one.  
+    else:
+      self.reward=0      # otherwise, set it to zero.
 
-    async def bread_bottom(focus='sandwich bread'):     # if focus buffer has this chunk then....
-        print("I have a piece of bread")           # print
-        log.action1=5
-        focus.set('stop')              # change chunk in focus buffer
-    async def cheese(focus='stop'):          # the rest of the productions are the same
-        print ("I have put cheese on the bread")    # but carry out different actions
-        self.stop()
-##
-##    def ham(focus='sandwich ham'):
-##        print "I have put  ham on the cheese"
-##        focus.set('sandwich bread_top')
-##
-##    def bread_top(focus='sandwich bread_top'):
-##        print "I have put bread on the ham"
-##        print "I have made a ham and cheese sandwich"
-##        focus.set('stop')   
-##
-##    def stop_production(focus='stop'):
-##        self.stop()                        # stop the agent
 
-tim=MyAgent()                              # name the agent
-subway=MyEnvironment()                     # name the environment
-subway.agent=tim                           # put the agent in the environment
-log_everything(subway)                 # print out what happens in the environment
+# This defines a simple agent.  We will examine this in more detail in the
+#  tutorials on creating models
+class SimpleModel(Model):
+  def start(self):
 
-subway.run(3)   
+    while True:               # repeat the following forever
+      self.parent.press('A')
+      yield 2                 # wait for 1 second before continuing
+
+
+# Now that the agent and the environment have been defined, we can create
+#  one of each, connect them together, and run the simulation.      
+env=ForcedChoiceEnvironment()   # create the environment
+model=SimpleModel()             # create the agent
+env.agent=model                 # put the agent in the environment
+log_everything(env)
+env.run(8)  
+print("act1",log.action1)
 
 def main():
     st.title("Streamlit ECharts Demo")
