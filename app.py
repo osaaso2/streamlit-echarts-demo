@@ -19,7 +19,7 @@ import sys
 
 class MyEnvironment(Model):
     pass
-
+log.as1="as1"
 #####
 # create an act-r agent
 
@@ -27,16 +27,16 @@ class MyAgent(ACTR):
     
     focus=Buffer()
     focus.set('sandwich bread')
-    #log.as0=111
+    log.as1="aso111"
     #log.as2="aaa"
     def bread_bottom(focus='sandwich bread'):     # if focus buffer has this chunk then....
         print("I have a piece of bread")           # print
-        log.error1='goal1'
+        log.as1='goal1'
         focus.set('sandwich cheese')              # change chunk in focus buffer
 
     def cheese(focus='sandwich cheese'):          # the rest of the productions are the same
         print ("ended")    # but carry out different actions
-        log.error2='goal2'
+        log.as2='goal2'
         focus.set('stop')
     def stop_production(focus='stop'):
         self.stop()                        # stop the agent
@@ -78,7 +78,7 @@ def main():
             else list(ST_DEMOS.keys())
         )
         selected_page = st.selectbox(
-            label="as label",
+            label=log.as1,
             options=page_options,
         )
         demo, url = (
