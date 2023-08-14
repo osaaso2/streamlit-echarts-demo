@@ -10,23 +10,11 @@ print("as900000000000000000")
 #logger=log(html=True)
 #logger = logging.getLogger()
 #logger.setLevel(logging.DEBUG)
-import unittest
+#import unittest
 import sys
 
 
 #logger.error='Test message 1!'
-
-
-class BasicTestCase(unittest.TestCase):
-    def test_one(self):
-        #logger.info='Test message 1!'
-        self.assertEqual(1, 1)
-
-    def test_two(self):
-        """Extended description"""
-        #logger.error='Test message 1!'
-        self.assertEqual(2, 2)
-
 
 
 class MyEnvironment(Model):
@@ -62,13 +50,19 @@ class MyAgent(ACTR):
 ##        print "I have made a ham and cheese sandwich"
 ##        focus.set('stop')   
 ##
+tim=MyAgent()                              # name the agent
+subway=MyEnvironment()                     # name the environment
+subway.agent=tim                           # put the agent in the environment
+log_everything(subway)                 # print out what happens in the environment
 
+subway.run(1)                               # run the environment
+print("run")
 print("as800000000000000000")
 
 def main():
     #logger.error='Test message 1!'
 
-    st.title(log.error1)
+    #st.title(log.error1)
 
     with st.sidebar:
         st.header("Configuration")
@@ -117,7 +111,7 @@ def main():
 
 if __name__ == "__main__":
     print("main000000")
-    logger.info="as  inf"
+    #logger.info="as  inf"
 
     st.set_page_config(
         page_title="aso title", page_icon=":chart_with_upwards_trend:"
@@ -125,13 +119,7 @@ if __name__ == "__main__":
     print("main2")
 
     main()
-    tim=MyAgent()                              # name the agent
-    subway=MyEnvironment()                     # name the environment
-    subway.agent=tim                           # put the agent in the environment
-    log_everything(subway)                 # print out what happens in the environment
 
-    subway.run(1)                               # run the environment
-    print("run")
     with st.sidebar:
         st.markdown("---")
         st.markdown(
