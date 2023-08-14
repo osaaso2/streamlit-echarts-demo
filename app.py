@@ -61,7 +61,7 @@ print("as800000000000000000")
 
 def main():
     #logger.error='Test message 1!'
-    program = ' = 5\nb=10\nprint("Sum =", a+b)'
+    program = 'a=5\nb=10\nprint("Sum =", a+b)'
     exec(program)
     #as0=str(a)
     #python_actr/tests/test_actr_compile.py
