@@ -12,6 +12,18 @@ print("as900000000000000000")
 #logger.setLevel(logging.DEBUG)
 import unittest
 import sys
+from qiskit import *
+import pylatexenc
+from qiskit.circuit import Parameter, QuantumCircuit
+
+x = Parameter('x')
+y = Parameter('y')
+
+circuit = QuantumCircuit(2)
+circuit.rx(x, 1)
+circuit.cx(1, 0)
+circuit.ry(-2*y, 0)
+circuit.draw("mpl")
 
 log.action1=1
 
