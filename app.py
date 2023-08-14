@@ -21,8 +21,8 @@ log.action1=1
 # so we 'pass' on putting things in there
 
 class MyEnvironment(Model):
-    log.action1=4
-    pass
+    log.action1=log.action1+100
+    #pass
 
 #####
 # create an act-r agent
@@ -57,7 +57,7 @@ subway=MyEnvironment()                     # name the environment
 subway.agent=tim                           # put the agent in the environment
 log_everything(subway)                 # print out what happens in the environment
 
-subway.run()   
+subway.run(3)   
 
 def main():
     st.title("Streamlit ECharts Demo")
