@@ -61,9 +61,11 @@ print("as800000000000000000")
 
 def main():
     #logger.error='Test message 1!'
-
+    program = 'a = 5\nb=10\nprint("Sum =", a+b)'
+    exec(program)
+    python_actr/tests/test_actr_compile.py
     #st.title(log.error1)
-
+    
     with st.sidebar:
         st.header("Configuration")
         api_options = ("echarts", "pyecharts")
