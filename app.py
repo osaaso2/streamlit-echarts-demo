@@ -15,7 +15,7 @@ import sys
 
 
 #logger.error='Test message 1!'
-
+log.as1="as1log"
 
 class MyEnvironment(Model):
     pass
@@ -80,7 +80,7 @@ def main():
             else list(ST_DEMOS.keys())
         )
         selected_page = st.selectbox(
-            label=log.as1+log.as2,
+            label=log.as1,
             options=page_options,
         )
         demo, url = (
