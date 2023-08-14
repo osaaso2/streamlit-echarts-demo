@@ -13,7 +13,7 @@ print("as900000000000000000")
 #import unittest
 import sys
 
-#log.as1="as1"
+log.as1="as1"
 
 class MyEnvironment(Model):
     pass
@@ -53,7 +53,7 @@ subway=MyEnvironment()                     # name the environment
 subway.agent=tim                           # put the agent in the environment
 log_everything(subway)                 # print out what happens in the environment
 
-subway.run(3)                               # run the environment
+subway.run()                               # run the environment
 
 
 def main():
