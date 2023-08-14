@@ -58,12 +58,12 @@ log_everything(subway)                 # print out what happens in the environme
 subway.run(1)                               # run the environment
 print("run")
 print("as800000000000000000")
-
+as0=12
 def main():
     #logger.error='Test message 1!'
     program = 'a=5\nb=10\nprint("Sum =", a+b)'
     exec(program)
-    as0=str(a)
+    as0=a
     #python_actr/tests/test_actr_compile.py
     #st.title(log.error1)
     
@@ -81,7 +81,7 @@ def main():
             else list(ST_DEMOS.keys())
         )
         selected_page = st.selectbox(
-            label=as0,
+            label=str(as0),
             options=page_options,
         )
         demo, url = (
