@@ -14,7 +14,7 @@ print("as900000000000000000")
 import sys
 log.as1="000"
 
-from ex1 import MyEnvironment, MyAgent
+#from  import MyEnvironment, MyAgent
 
 tim=MyAgent()                              # name the agent
 subway=MyEnvironment()                     # name the environment
