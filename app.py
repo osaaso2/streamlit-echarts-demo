@@ -52,7 +52,7 @@ env=ForcedChoiceEnvironment()   # create the environment
 model=SimpleModel()             # create the agent
 env.agent=model                 # put the agent in the environment
 log_everything(env)
-env.run(3)  
+env.run(5)  
 
 def main():
 
