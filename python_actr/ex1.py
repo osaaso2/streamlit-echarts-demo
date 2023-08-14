@@ -6,7 +6,7 @@ import random
 import os
 
 #logger.error='Test message 1!'
-from . import log
+from . import logger
 log.as1="as1log"
 
 class MyEnvironment(Model):
