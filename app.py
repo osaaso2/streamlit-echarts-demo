@@ -21,6 +21,7 @@ log.action1="1"
 # so we 'pass' on putting things in there
 
 class MyEnvironment(Model):
+    log.action1="4"
     pass
 
 #####
