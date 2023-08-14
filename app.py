@@ -80,7 +80,7 @@ def main():
             else list(ST_DEMOS.keys())
         )
         selected_page = st.selectbox(
-            label="asolab",
+            label=log.as1+log.as2,
             options=page_options,
         )
         demo, url = (
