@@ -40,7 +40,7 @@ class SimpleModel(Model):
       print("as10000")
       self.parent.press('A')
       yield 1                 # wait for 1 second before continuing
-      log.action2=23   # here we record what letter was pressed
+      log.action1="as3"   # here we record what letter was pressed
 
 
 # Now that the agent and the environment have been defined, we can create
@@ -49,7 +49,7 @@ env=ForcedChoiceEnvironment()   # create the environment
 model=SimpleModel()             # create the agent
 env.agent=model                 # put the agent in the environment
 log_everything(env)
-env.run()  
+env.run(3)  
 
 
 def main():
