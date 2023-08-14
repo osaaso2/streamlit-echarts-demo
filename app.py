@@ -22,7 +22,7 @@ class MyEnvironment(Model):
 
 class ForcedChoiceEnvironment(Model):
   # this is an action that can be taken by the agent in the environment
-  def press(self,letter):     # 'self' refers to the thing we are currently
+  async def press(self,letter):     # 'self' refers to the thing we are currently
                               #  of defining.  In this case, the environment
     log.action1="as2"   # here we record what letter was pressed
 
@@ -35,7 +35,7 @@ class ForcedChoiceEnvironment(Model):
 # This defines a simple agent.  We will examine this in more detail in the
 #  tutorials on creating models
 class SimpleModel(Model):
-  def start(self):
+  async def start(self):
     log.action1="as3"   # here we record what letter was pressed
 
     while True:               # repeat the following forever
