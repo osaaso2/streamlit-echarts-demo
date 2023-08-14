@@ -101,53 +101,7 @@ def main():
     with st.expander("Source Code"):
         st.code(textwrap.dedent("".join(sourcelines[1:])))
 
-        class MyEnvironment(Model):
-            pass
-        log.as1="as1"
-        #####
-        # create an act-r agent
-        
-        class MyAgent(ACTR):
-            
-            focus=Buffer()
-            focus.set('sandwich bread')
-            log.as1="aso111"
-            #log.as2="aaa"
-            def bread_bottom(focus='sandwich bread'):     # if focus buffer has this chunk then....
-                print("I have a piece of bread")           # print
-                log.as1='goal1'
-                focus.set('sandwich cheese')              # change chunk in focus buffer
-        
-            def cheese(focus='sandwich cheese'):          # the rest of the productions are the same
-                print ("ended")    # but carry out different actions
-                log.as2='goal2'
-                focus.set('stop')
-            def stop_production(focus='stop'):
-                self.stop()                        # stop the agent
-        ##
-        ##    def ham(focus='sandwich ham'):
-        ##        print "I have put  ham on the cheese"
-        ##        focus.set('sandwich bread_top')
-        ##
-        ##    def bread_top(focus='sandwich bread_top'):
-        ##        print "I have put bread on the ham"
-        ##        print "I have made a ham and cheese sandwich"
-        ##        focus.set('stop')   
-        ##
-        #from python_actr import ex1
-        #from  import MyEnvironment, MyAgent
-        
-        tim=MyAgent()                              # name the agent
-        subway=MyEnvironment()                     # name the environment
-        subway.agent=tim                           # put the agent in the environment
-        log_everything(subway)                 # print out what happens in the environment
-        
-        subway.run(1)                               # run the environment
-        print("run")
-        print("as800000000000000000")
-        as111="112"
-
-    st.markdown(f"Credit: {url}{as111}")
+        st.markdown(f"Credit: {url}{as111}")
 
 
 if __name__ == "__main__":
