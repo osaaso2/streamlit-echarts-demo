@@ -19,7 +19,6 @@ class MyEnvironment(Model):
     pass
 #####
 # create an act-r agent
-log.action1=10
 
 class ForcedChoiceEnvironment(Model):
   # this is an action that can be taken by the agent in the environment
@@ -50,7 +49,7 @@ env=ForcedChoiceEnvironment()   # create the environment
 model=SimpleModel()             # create the agent
 env.agent=model                 # put the agent in the environment
 log_everything(env)
-env.run(5)  
+env.run()  
 
 def main():
 
