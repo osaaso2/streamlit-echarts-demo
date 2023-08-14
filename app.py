@@ -56,7 +56,7 @@ subway=MyEnvironment()                     # name the environment
 subway.agent=tim                           # put the agent in the environment
 log_everything(subway)                 # print out what happens in the environment
 
-subway.run()                               # run the environment
+subway.run(3)                               # run the environment
 
 def main():
 
