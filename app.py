@@ -109,7 +109,6 @@ if __name__ == "__main__":
     st.set_page_config(
         page_title="aso title", page_icon=":chart_with_upwards_trend:"
     )
-=
     main()
 
     with st.sidebar:
